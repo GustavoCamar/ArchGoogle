@@ -5,9 +5,15 @@
   <meta charset="utf-8">
   <title>Análisis de Lesiones en la Piel</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
     }
 
     .container {
@@ -123,6 +129,7 @@
       background-color: #f2f2f2;
       border-radius: 5px;
       overflow: hidden;
+      margin-bottom: 10px;
     }
 
     .progress-bar-inner {
@@ -180,24 +187,13 @@
       margin-top: 30px;
     }
 
-    .university-logo {
-      display: block;
-      margin: 0 auto;
-      width: 200px;
-      max-width: 100%;
-    }
-
     /* Estilos adicionales */
-
-    .container {
-      box-sizing: border-box;
-    }
 
     .frame-container {
       border: 1px solid #ccc;
       border-radius: 5px;
-      margin-bottom: 20px;
       padding: 20px;
+      margin-bottom: 20px;
     }
 
     .selected-image {
@@ -208,6 +204,30 @@
       border: 1px solid #ccc;
       border-radius: 5px;
       margin-bottom: 20px;
+    }
+
+    .frame-container h2 {
+      margin-top: 0;
+    }
+
+    .frame-container p {
+      margin-bottom: 0;
+    }
+
+    .frame-container form {
+      margin-top: 20px;
+    }
+
+    .frame-container .progress-bar {
+      margin-bottom: 10px;
+    }
+
+    .frame-container .button {
+      margin-top: 10px;
+    }
+
+    .model-features li {
+      margin-bottom: 5px;
     }
   </style>
   <link href="https://fonts.googleapis.com/css?family=Arial+Black&display=swap" rel="stylesheet">
