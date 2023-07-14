@@ -186,25 +186,48 @@
       width: 200px;
       max-width: 100%;
     }
+    
+    /* Estilos adicionales */
+    
+    .container {
+      box-sizing: border-box;
+    }
+
+    .frame-container {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    .selected-image {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css?family=Arial+Black&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
-    <div class="left-frame">
+    <div class="left-frame frame-container">
       <h1>Analizador de Lesiones en la Piel</h1>
       <p>Analizador de imágenes en línea de los tres diagnósticos más probables para una lesión en la piel.</p>
 
       <div class="w3-center">
         <div align="center">
-          <img id="selected-image" class="w3-round adjust-image" src="assets/samplepic.jpg" alt="">
+          <img id="selected-image" class="selected-image" src="assets/samplepic.jpg" alt="">
         </div>
       </div>
     </div>
 
     <div class="right-frame">
-      <div class="prediction">
+      <div class="prediction frame-container">
         <h2 class="prediction-title">Resultados</h2>
         <ul class="prediction-list" id="prediction-list"></ul>
       </div>
