@@ -131,6 +131,61 @@
       background-color: #007bff;
       transition: width 0.3s;
     }
+
+    .prediction {
+      margin-top: 30px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+
+    .prediction-title {
+      color: #005a8d;
+      font-family: 'Arial Black', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .prediction-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .prediction-item {
+      color: #666666;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .model-features {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .model-feature {
+      color: #666666;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .credits-text {
+      color: #666666;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-top: 30px;
+    }
+
+    .university-logo {
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+      max-width: 100%;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css?family=Arial+Black&display=swap" rel="stylesheet">
 </head>
@@ -149,9 +204,9 @@
     </div>
 
     <div class="right-frame">
-      <div class="w3-center add-padding w3-border add-margin side-margin w3-round w3-pale-blue">
-        <h5 class='new-font'>Resultados</h5>
-        <ol class='w3-left-align' id='prediction-list'></ol>
+      <div class="prediction">
+        <h2 class="prediction-title">Resultados</h2>
+        <ul class="prediction-list" id="prediction-list"></ul>
       </div>
 
       <div class="section">
@@ -172,18 +227,18 @@
       </div>
 
       <div class="section">
-        <h2>Características técnicas del Modelo:</h2>
-        <ul id="model-features">
-          <li>Exactitud: <span id="accuracy"></span></li>
-          <li>Precisión: <span id="precision"></span></li>
-          <li>Sensibilidad: <span id="sensitivity"></span></li>
+        <h2 class="prediction-title">Características técnicas del Modelo:</h2>
+        <ul class="model-features" id="model-features">
+          <li class="model-feature">Exactitud: <span id="accuracy"></span></li>
+          <li class="model-feature">Precisión: <span id="precision"></span></li>
+          <li class="model-feature">Sensibilidad: <span id="sensitivity"></span></li>
         </ul>
 
         <p>El entrenamiento del modelo está basado en el conjunto de 10015 imágenes dermatoscópicas de Harvard, entrenado con Tensorflow.</p>
       </div>
 
       <div class="credits">
-        <p>Realizado por: Gustavo Camargo, Andrés Rico y Alejandro Ibarra</p>
+        <p class="credits-text">Realizado por: Gustavo Camargo, Andrés Rico y Alejandro Ibarra</p>
       </div>
 
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Logo_de_la_Universidad_El_Bosque.svg/800px-Logo_de_la_Universidad_El_Bosque.svg.png" alt="Universidad del Bosque" class="university-logo">
@@ -274,7 +329,7 @@
 
         $("#prediction-list").empty();
         top5.forEach(function(p) {
-          $("#prediction-list").append(`<li>${p.className}: ${p.probability.toFixed(6)}</li>`);
+          $("#prediction-list").append(`<li class="prediction-item">${p.className}: ${p.probability.toFixed(6)}</li>`);
         });
       });
     });
