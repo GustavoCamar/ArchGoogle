@@ -1,283 +1,186 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Análisis de Lesiones en la Piel</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-    }
 
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f8f8f8;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      display: flex;
-    }
+<meta charset="utf-8">
+<title>Analizador de lesiones en la piel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Online image analyzer of the three most likely diagnoses for a skin lesion.">
 
-    .left-frame,
-    .right-frame {
-      flex: 1;
-      background-color: #f2f2f2;
-      margin: 0 10px;
-      padding: 20px;
-      border-radius: 5px;
-    }
 
-    .left-frame {
-      color: #005a8d;
-    }
+<!--Código para evitar que el navegador almacene en caché la página-->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+  <title>Instituto de Neurociencias</title>
+        <link href="css/inicio.css" rel="stylesheet" type="text/css" />
+        <link href="css/slider.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
 
-    .right-frame {
-      color: #333333;
-    }
 
-    h1 {
-      text-align: center;
-      color: #005a8d;
-      font-family: 'Arial Black', sans-serif;
-      font-weight: 400;
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
 
-    p {
-      color: #666666;
-      font-size: 16px;
-      line-height: 1.5;
-      margin-bottom: 20px;
-    }
 
-    .button {
-      display: block;
-      margin: 0 auto;
-      background-color: #007bff;
-      color: #ffffff;
-      padding: 10px 20px;
-      margin-top: 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-      font-family: Arial, sans-serif;
-      font-weight: 300;
-      font-size: 16px;
-    }
 
-    .button:hover {
-      background-color: #0056b3;
-    }
+<!--Hojas de estilo CSS-->
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/bee.css">
 
-    .upload-btn {
-      display: none;
-    }
+<!--Link a los iconos de Font Awesome-->
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
 
-    .file-info {
-      margin-top: 10px;
-      font-size: 14px;
-      color: #666666;
-    }
+<!--Enlace a fuentes de google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
+<link rel="shortcut icon" type="image/png" href="logoinub2.jpg">
 
-    h2 {
-      color: #005a8d;
-      font-family: 'Arial Black', sans-serif;
-      font-weight: 400;
-      font-size: 24px;
-      margin-top: 30px;
-      margin-bottom: 10px;
-    }
 
-    ul {
-      color: #666666;
-      margin-left: 20px;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-    
-    .section {
-      border-top: 1px solid #ccc;
-      padding-top: 20px;
-      margin-top: 20px;
-    }
+<style>
+html,body,h2,h3,h4 {font-family: Helvetica, sans-serif}
+</style>
 
-    .credits {
-      margin-top: 30px;
-      text-align: center;
-      font-family: 'Arial', sans-serif;
-    }
 
-    .university-logo {
-      display: block;
-      margin: 0 auto;
-      width: 200px;
-      max-width: 100%;
-    }
-
-    .progress-bar {
-      width: 100%;
-      background-color: #f2f2f2;
-      border-radius: 5px;
-      overflow: hidden;
-    }
-
-    .progress-bar-inner {
-      width: 0%;
-      height: 10px;
-      background-color: #007bff;
-      transition: width 0.3s;
-    }
-  </style>
-  <link href="https://fonts.googleapis.com/css?family=Arial+Black&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <div class="container">
-    <div class="left-frame">
-      <h1>Analizador de Lesiones en la Piel</h1>
-      <p>Analizador de imágenes en línea de los tres diagnósticos más probables para una lesión en la piel.</p>
 
-      <div class="w3-center">
-        <div align="center">
-          <img id="selected-image" class="w3-round adjust-image" src="assets/samplepic.jpg" alt="">
-        </div>
-      </div>
+<body class="front not-logged-in page-node no-sidebars i18n-en front not-logged-in cuerpo_con_promo cuerpo_con_menu page-node-1">
+
+	<div id="sticky_footer-body">
+            <div id="encabezado">
+                <div class="cajon">
+                    
+                    <!-- herramientas -->
+                    <div id="herramientas">
+                        <div id="block-search-0" class="clear-block block block-search">
+                            <div class="content">
+                                <form action="/en"  accept-charset="UTF-8" method="post" id="search-block-form">
+                                    <div>
+                                       
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- enlaces a micrositios -->
+                    <div id="micrositios">
+                    	<div class='w3-padding'>
+                        <div id="block-menu-primary-links" class="clear-block block block-menu">
+                            <div class="content">
+                                <ul class="menu">
+								<a href="index.html" title="Ir a la p&aacute;gina principal"><img src="img/logotiponn.png" alt="" id="logo" style="float:none;" /></a>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+<!-- w3-content define un contenedor para contenido centrado de tamaño fijo,
+y se envuelve alrededor de todo el contenido de la página. -->
+<div class="w3-content card" style="max-width:960px">
+
+
+
+<!-- 1. HOME PAGE TAB -->
+<div class="tabbed w3-animate-opacity w3-white" id="home">
+
+
+
+<!-- Header -->
+
+<div class="w3-center title adjust-fontcolor logo">
+	<div class="w3-center">
+	<img class="w3-round adjust-image" src="assets/logoinub.jpg" width="150" alt=""> 
+</div> 
+	
+  <h1 class="space-letters w3-text-green"><b>Analizador de lesiones en la piel</b></h1>
+  
+  <h3 class="space-letters w3-text-green"><b>Analizador de imágenes en línea de los tres diagnósticos más probables para una lesión en la piel</b></h3>
+  
+</div>
+
+
+
+
+<!-- Imagen de portada -->
+<!-- Esta imagen será reemplazada una vez que se ejecute el código js. -->
+<div class="w3-center">
+	<div align="center">
+	<img id="selected-image" class="w3-round adjust-image" src="assets/samplepic.jpg" alt=""> 
     </div>
+</div> 
 
-    <div class="right-frame">
-      <div class="w3-center add-padding w3-border add-margin side-margin w3-round w3-pale-blue">
-        <h5 class='new-font'>Resultados</h5>
-        <ol class='w3-left-align' id='prediction-list'></ol>
-      </div>
 
-      <div class="section">
-        <form id="upload-form" style="text-align: center;">
-          <input type="file" id="image-selector" class="upload-btn" accept="image/*">
-          <label for="image-selector" class="button">Cargar imagen</label>
-          <div class="progress-bar">
-            <div class="progress-bar-inner" id="progress-bar-inner"></div>
-          </div>
-        </form>
+<div class="w3-center">
+	<div class="progress-bar">Modelo con Inteligencia Artificial cargando...</div>
+</div>
 
-        <div id="file-info" class="file-info"></div>
 
-        <button id="predict-button" class="button">Realizar predicción</button>
-        <div class="progress-bar">
-            <div class="progress-bar-inner" id="prediction-progress-bar-inner"></div>
-          </div>
-      </div>
+<div class="w3-center add-padding w3-border add-margin side-margin w3-round w3-pale-blue">
+		
+	<h5 class='new-font'>Resultados</h5>
+	<ol class='w3-left-align' id='prediction-list'></ol>
+		
+</div>
 
-      <div class="section">
-        <h2>Características técnicas del Modelo:</h2>
-        <ul>
-          <li id="exactitud">Exactitud:</li>
-          <li id="precision">Precisión:</li>
-          <li id="sensibilidad">Sensibilidad:</li>
-        </ul>
 
-        <p>El entrenamiento del modelo está basado en el conjunto de 10015 imágenes dermatoscópicas de Harvard, entrenado con Tensorflow.</p>
-      </div>
+<!-- Button, cree una etiqueta button con propiedades de cambio de color una vez es seleccionado despliegue la 
+apertura de camara o realice un llamado al método simulateClick()-->
+<div id="btnn" class="w3-center bottom-padding">
+	
+	<button class="w3-btn w3-blue w3-round w3-margin-bottom adjust-spacing w3-hover-green btn-font w3-padding w3-space-letters w3-card-4" onclick="setTimeout(simulateClick.bind(null, 'image-selector'), 200)"><i class='fas fa-camera w3-padding-right' style='font-size:15px'></i><b>Enviar una imagen de una lesión en la piel</b></button>
+</div> 
 
-      <div class="credits">
-        <p>Realizado por: Gustavo Camargo, Andrés Rico y Alejandro Ibarra</p>
-      </div>
 
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Logo_de_la_Universidad_El_Bosque.svg/800px-Logo_de_la_Universidad_El_Bosque.svg.png" alt="Universidad del Bosque" class="university-logo">
-    </div>
-  </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      let model;
-      
-      // Simular un clic en el botón de predicción cuando se carga la página
-      function predictOnLoad() {
-        setTimeout(function() {
-          $("#predict-button").click();
-        }, 500);
-      }
 
-      // Evento change del selector de imagen
-      $("#image-selector").change(function() {
-        let reader = new FileReader();
-        reader.onload = function() {
-          let dataURL = reader.result;
-          $("#selected-image").attr("src", dataURL);
-          $("#prediction-list").empty();
-        };
+</div><!--Final del Home Page, documente los resultados obtenidos del modelo, a saber, Exactitud, Presición y Sencibilidad, dando créditos a la base de datos trabajada-->
 
-        let file = $("#image-selector").prop("files")[0];
-        reader.readAsDataURL(file);
+<div class='w3-padding'>
+	<h5 class="space-letters tag-font w3-text-green"><b>Caracteristicas técnicas del Modelo:</b></h5>
+	<h5 class="space-letters tag-font w3-text-green"><b>- Exactitud: 0.90 </b></h5>
+	<h5 class="space-letters tag-font w3-text-green"><b>- Presición: 0.91 </b></h5>
+	<h5 class="space-letters tag-font w3-text-green"><b>- Sencibilidad: 0.90 </b></h5>
+	<h6 class="space-letters tag-font w3-text-green"><b>El entrenamiento del modelo está basado en el conjunto de 10015 imágenes dermatoscópicas de Harvard, entrenado con Tensorflow</b></h6>
+</div>
 
-        // Simular un clic en el botón de predicción
-        // Esto introduce un retardo de 0,5 segundos antes del clic
-        // Sin este retardo, el modelo se carga pero no puede predecir automáticamente
-        setTimeout(function() {
-          $("#predict-button").click();
-        }, 500);
-      });
+<!-- Simulamos clics en estos dos botones de carga inicial. -->
+<div class="hide">
+	<button id='predict-button'>Predict</button>
+</div>
 
-      // Carga del modelo y predicción al cargar la página
-      (async function() {
-        model = await tf.loadModel("model_kerasnative_v4/model.json");
-        $("#selected-image").attr("src", "assets/samplepic.jpg");
+<div class="hide">
+	<input id="image-selector" type="file">
+</div>
+<!--===================================-->
 
-        // Ocultar la barra de progreso del modelo
-        $(".progress-bar").hide();
 
-        // Simular un clic en el botón de predicción
-        predictOnLoad();
-      })();
+	<!-- cargando jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 
-      // Evento click del botón de predicción
-      $("#predict-button").click(async function() {
-        let image = $("#selected-image").get(0);
-
-        // Preprocesar la imagen
-        image.width = 600;
-        image.height = 450;
-
-        let tensor = tf.fromPixels(image)
-          .resizeNearestNeighbor([224, 224])
-          .toFloat();
-
-        let offset = tf.scalar(127.5);
-        tensor = tensor.sub(offset)
-          .div(offset)
-          .expandDims();
-
-        let predictions = await model.predict(tensor).data();
-        let top5 = Array.from(predictions)
-          .map(function(p, i) {
-            return {
-              probability: p,
-              className: TARGET_CLASSES[i]
-            };
-          })
-          .sort(function(a, b) {
-            return b.probability - a.probability;
-          })
-          .slice(0, 6);
-
-        $("#prediction-list").empty();
-        top5.forEach(function(p) {
-          $("#prediction-list").append(`<li>${p.className}: ${p.probability.toFixed(6)}</li>`);
-        });
-      });
-    });
-  </script>
+	</script>
+	<!-- cargando TensorFlow.js -->
+	
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"> 
+	</script>
+	
+	<!-- NOTA:
+	Cambie el nombre del archivo predict.js (cambie el número) cada vez que modifique el archivo predict.js.
+	Esto forzará al navegador a cargar el predict.js más reciente y no cargar
+	el archivo predict.js que está en la caché del usuario.
+	Hay una solución en stackoverflow que dice que hay que añadir una versión al archivo js. 
+	Pero podría ser que algunos navegadores puedan ignorar la versión. Por lo tanto creo que
+	es más seguro cambiar el nombre del archivo js.-->
+	<script src="jscript/target_classes.js"></script>
+	<script src="jscript/predict100.js"></script> 
+	
+	
+	
+</div> <!-- w3-content -->
+</div>
 </body>
-
 </html>
-
-
-
-
-
 
