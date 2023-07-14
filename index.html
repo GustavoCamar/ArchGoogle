@@ -174,9 +174,9 @@
       <div class="section">
         <h2>Características técnicas del Modelo:</h2>
         <ul id="model-features">
-          <li>Exactitud:</li>
-          <li>Precisión:</li>
-          <li>Sensibilidad:</li>
+          <li>Exactitud: <span id="accuracy"></span></li>
+          <li>Precisión: <span id="precision"></span></li>
+          <li>Sensibilidad: <span id="sensitivity"></span></li>
         </ul>
 
         <p>El entrenamiento del modelo está basado en el conjunto de 10015 imágenes dermatoscópicas de Harvard, entrenado con Tensorflow.</p>
@@ -234,9 +234,9 @@
         $(".progress-bar").hide();
 
         // Cargar características del modelo
-        $("#model-features li").eq(0).text("Exactitud: " + MODEL_FEATURES.accuracy.toFixed(2));
-        $("#model-features li").eq(1).text("Precisión: " + MODEL_FEATURES.precision.toFixed(2));
-        $("#model-features li").eq(2).text("Sensibilidad: " + MODEL_FEATURES.sensitivity.toFixed(2));
+        $("#accuracy").text("0.87");
+        $("#precision").text("0.97");
+        $("#sensitivity").text("0.98");
 
         // Simular un clic en el botón de predicción
         predictOnLoad();
