@@ -43,10 +43,10 @@
 
     .title {
       padding: 20px;
-      background-color: #fff;
+      background-color: #ffffff;
       margin-bottom: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .w3-text-green {
@@ -54,8 +54,8 @@
     }
 
     .w3-card-4 {
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
     }
 
     .btn-font {
@@ -107,6 +107,32 @@
 
     #btnn {
       margin-top: 20px;
+    }
+
+    /* Resultados con framework */
+    .results-container {
+      padding: 20px;
+      background-color: #f2f2f2;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .result-item {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .result-item-title {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .result-item-description {
+      font-size: 14px;
     }
   </style>
 </head>
@@ -174,9 +200,23 @@ y se envuelve alrededor de todo el contenido de la página. -->
           </div>
         </div>
 
-        <div class="w3-center add-padding w3-border add-margin side-margin w3-round w3-pale-blue">
-          <h5 class='new-font'>Resultados</h5>
-          <ol class='w3-left-align' id='prediction-list'></ol>
+        <!-- Resultados con framework -->
+        <div class="results-container">
+          <h5 class="tag-font w3-text-green"><b>Resultados</b></h5>
+          <div id="prediction-list">
+            <div class="result-item">
+              <div class="result-item-title">Diagnóstico 1</div>
+              <div class="result-item-description">Descripción del diagnóstico 1</div>
+            </div>
+            <div class="result-item">
+              <div class="result-item-title">Diagnóstico 2</div>
+              <div class="result-item-description">Descripción del diagnóstico 2</div>
+            </div>
+            <div class="result-item">
+              <div class="result-item-title">Diagnóstico 3</div>
+              <div class="result-item-description">Descripción del diagnóstico 3</div>
+            </div>
+          </div>
         </div>
 
         <!-- Button, cree una etiqueta button con propiedades de cambio de color una vez es seleccionado despliegue la 
@@ -191,10 +231,10 @@ y se envuelve alrededor de todo el contenido de la página. -->
 
       </div><!-- Final del Home Page, documente los resultados obtenidos del modelo, a saber, Exactitud, Presición y Sencibilidad, dando créditos a la base de datos trabajada -->
       <div class='w3-padding'>
-        <h5 class="space-letters tag-font w3-text-green"><b>Caracteristicas técnicas del Modelo:</b></h5>
+        <h5 class="space-letters tag-font w3-text-green"><b>Características técnicas del Modelo:</b></h5>
         <h5 class="space-letters tag-font w3-text-green"><b>- Exactitud: 0.90 </b></h5>
-        <h5 class="space-letters tag-font w3-text-green"><b>- Presición: 0.91 </b></h5>
-        <h5 class="space-letters tag-font w3-text-green"><b>- Sencibilidad: 0.90 </b></h5>
+        <h5 class="space-letters tag-font w3-text-green"><b>- Precisión: 0.91 </b></h5>
+        <h5 class="space-letters tag-font w3-text-green"><b>- Sensibilidad: 0.90 </b></h5>
         <h6 class="space-letters tag-font w3-text-green"><b>El entrenamiento del modelo está basado en el conjunto de
             10015 imágenes dermatoscópicas de Harvard, entrenado con Tensorflow</b></h6>
       </div>
